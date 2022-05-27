@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>課題１</title>
+</head>
+<body>
+  <header class="header1">
+    <div class="header1__inner">
+      <a href="#" class="header1__inner__logo">Profile</a>
+      <nav class="header1__inner__nav">
+        <div class="header1__inner__nav__contents">
+          <!-- クリック時イベント発火あり。変更可能性あり -->
+          <a href="#" onClick="location.hash='About'; return false;">About</a>
+        </div>
+        <div class="header1__inner__nav__contents">
+          <a href="#" onClick="location.hash='Bicycle'; return false;">Bicycle</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main1">
+    <img class="main-img" src="https://placehold.jp/1600x800.png" alt="main-img_1600x800">
+    <div class="about-contents">
+      <a name="About">About</a>
+      <div class="about-contents__profile">
+        <img class="about-contents__profile__img-block" src="https://placehold.jp/100x100.png" alt="profile-img">
+        <div class="about-contents__profile__text-block">
+          <p class="about-contents__profile__text-block__name">KAKERU MIYAICHI</p>
+          <p class="about-contents__profile__text-block__text">
+            テキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="article-contents">
+      <a name="Bicycle">Bicycle</a>
+      <div class="article-contents__lists">
+        <article id="media-w" class="article-contents__lists__list">
+          <img src="https://placehold.jp/260x180.png" alt="article-img">
+          <p class="article-contents__lists__list__title">タイトルタイトル</p>
+          <p class="article-contents__lists__list__text">テキストテキストテキスト</p>
+        </article>
+        <article id="media-w" class="article-contents__lists__list">
+          <img src="https://placehold.jp/260x180.png" alt="article-img">
+          <p class="article-contents__lists__list__title">タイトルタイトル</p>
+          <p class="article-contents__lists__list__text">テキストテキストテキスト</p>
+        </article>
+        <article id="media-w" class="article-contents__lists__list">
+          <img src="https://placehold.jp/260x180.png" alt="article-img">
+          <p class="article-contents__lists__list__title">タイトルタイトル</p>
+          <p class="article-contents__lists__list__text">テキストテキストテキスト</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer1">
+    <div class="Copyright">© 2020 Profile</div>
+  </footer>
+</body>
+</html>

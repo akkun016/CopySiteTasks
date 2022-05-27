@@ -1,0 +1,158 @@
+// 命名規則：BEM
+@charset 'utf-8';
+@import './color';
+
+body, div, p, span, a, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header1 {
+  height: 62px;
+  width: 100vw;
+  &__inner {
+    height: 100%;
+    max-width: 860px;
+    // background-color: green;
+    margin: 0 auto;
+    padding: 0 30px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+      height: 40px;
+      background-color: $main-black;
+      padding: 0 20px;
+      line-height: 40px;
+      display: inline-block;
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    &__nav {
+      display: flex;
+      &__contents {
+        display: block;
+        padding-right: 26px;
+        a {
+          font-size: 14px;
+          color: $main-black;
+          text-decoration: none;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin SplitTheme {
+  max-width: 860px;
+  margin: 0 auto 100px;
+  padding: 0 30px;
+}
+@mixin ThemeTitle() {
+  display: inline-block;
+  border-bottom: $main-black solid 1px;
+  color: $main-black;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.main1 {
+  .main-img {
+    height: 600px;
+    width: 100vw;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 90px;
+  }
+  .about-contents {
+    @include SplitTheme();
+    text-align: center;
+    a {
+      @include ThemeTitle();
+    }
+    &__profile {
+      display: flex;
+      justify-content: center;
+      &__img-block {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-right: 30px;
+      }
+      &__text-block {
+        text-align: left;
+        &__name {
+          font-size: 16px;
+          font-weight: bold;
+          margin: 10px 0;
+        }
+        &__text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .article-contents {
+    @include SplitTheme();
+    text-align: center;
+    a {
+      @include ThemeTitle();
+    }
+    &__lists {
+      display: flex;
+      justify-content: space-between;
+      &__list {
+        width: 32%;
+        text-align: center;
+        img {
+          width: 100%;
+        }
+        &__title {
+          font-size: 16px;
+          font-weight: bold;
+          margin: 10px 0;
+        }
+        &__text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-contents {
+    &__profile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .article-contents {
+    &__lists {
+      flex-direction: column;
+      &__list#media-w {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.footer1 {
+  width: 100vw;
+  text-align: center;
+  .Copyright {
+    font-size: 10px;
+    margin: 10px 0;
+  }
+}
