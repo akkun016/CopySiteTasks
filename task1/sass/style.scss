@@ -2,34 +2,39 @@
 @charset 'utf-8';
 @import './color';
 
-body, div, p, span, a, h1, h2, h3, h4, h5 {
+html {
+  font-size: 100%;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+div, h1, h2, h3, h4, h5, p, span {
+  color: $main-black;
+}
+
 .header1 {
-  height: 62px;
   width: 100vw;
   &__inner {
     height: 100%;
-    max-width: 860px;
-    // background-color: green;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 4%;
     align-items: center;
     display: flex;
     justify-content: space-between;
     &__logo {
-      height: 40px;
-      background-color: $main-black;
-      padding: 0 20px;
-      line-height: 40px;
-      display: inline-block;
-      font-size: 22px;
-      font-weight: bold;
-      color: #ffffff;
-      text-decoration: none;
+      padding: 10px 0;
+      line-height: 1px;
+      a {
+        display: block;
+        img {
+          max-width: 100%;
+        }
+      }
     }
     &__nav {
       display: flex;
@@ -53,15 +58,14 @@ body, div, p, span, a, h1, h2, h3, h4, h5 {
 }
 
 @mixin SplitTheme {
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto 100px;
-  padding: 0 30px;
+  padding: 0 4%;
 }
 @mixin ThemeTitle() {
   display: inline-block;
   border-bottom: $main-black solid 1px;
-  color: $main-black;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 60px;
 }
@@ -70,9 +74,10 @@ body, div, p, span, a, h1, h2, h3, h4, h5 {
   .main-img {
     height: 600px;
     width: 100vw;
+    max-width: 1920px;
     object-fit: cover;
     display: block;
-    margin-bottom: 90px;
+    margin-bottom: 80px;
   }
   .about-contents {
     @include SplitTheme();
@@ -92,7 +97,7 @@ body, div, p, span, a, h1, h2, h3, h4, h5 {
       &__text-block {
         text-align: left;
         &__name {
-          font-size: 16px;
+          font-size: 1rem;
           font-weight: bold;
           margin: 10px 0;
         }
@@ -113,13 +118,11 @@ body, div, p, span, a, h1, h2, h3, h4, h5 {
       justify-content: space-between;
       &__list {
         width: 32%;
-        text-align: center;
         img {
           width: 100%;
         }
         &__title {
-          font-size: 16px;
-          font-weight: bold;
+          font-size: 1rem;
           margin: 10px 0;
         }
         &__text {
@@ -152,7 +155,7 @@ body, div, p, span, a, h1, h2, h3, h4, h5 {
   width: 100vw;
   text-align: center;
   .Copyright {
-    font-size: 10px;
+    font-size: 0.5rem;
     margin: 10px 0;
   }
 }
