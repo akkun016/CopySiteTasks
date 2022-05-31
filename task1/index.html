@@ -14,12 +14,10 @@
         <a href="#"><img src="https://placehold.jp/120x40.png" alt="header1-logo"></a>
       </h1>
       <nav class="header1__inner__nav">
-        <div class="header1__inner__nav__contents">
-          <a href="#" onClick="location.hash='About'; return false;">About</a>
-        </div>
-        <div class="header1__inner__nav__contents">
-          <a href="#" onClick="location.hash='Bicycle'; return false;">Bicycle</a>
-        </div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#bicycle">Bicycle</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -27,7 +25,7 @@
   <main class="main1">
     <img class="main-img" src="https://placehold.jp/1600x800.png" alt="main-img_1600x800">
     <section class="about-contents">
-      <a name="About">About</a>
+      <h2 id="about">About</h2>
       <div class="about-contents__profile">
         <img class="about-contents__profile__img-block" src="https://placehold.jp/100x100.png" alt="profile-img">
         <div class="about-contents__profile__text-block">
@@ -38,20 +36,20 @@
         </div>
       </div>
     </section>
-    <section class="article-contents">
-      <a name="Bicycle">Bicycle</a>
+    <section id="article" class="article-contents">
+      <h2 id="bicycle">Bicycle</h2>
       <div class="article-contents__lists">
-        <article id="media-w" class="article-contents__lists__list">
+        <article class="article-contents__lists__list">
           <img src="https://placehold.jp/260x180.png" alt="article-img">
           <h3 class="article-contents__lists__list__title">タイトルタイトル</h3>
           <p class="article-contents__lists__list__text">テキストテキストテキスト</p>
         </article>
-        <article id="media-w" class="article-contents__lists__list">
+        <article class="article-contents__lists__list">
           <img src="https://placehold.jp/260x180.png" alt="article-img">
           <h3 class="article-contents__lists__list__title">タイトルタイトル</h3>
           <p class="article-contents__lists__list__text">テキストテキストテキスト</p>
         </article>
-        <article id="media-w" class="article-contents__lists__list">
+        <article class="article-contents__lists__list">
           <img src="https://placehold.jp/260x180.png" alt="article-img">
           <h3 class="article-contents__lists__list__title">タイトルタイトル</h3>
           <p class="article-contents__lists__list__text">テキストテキストテキスト</p>
@@ -61,7 +59,7 @@
   </main>
 
   <footer class="footer1">
-    <p class="Copyright">© 2020 Profile</p>
+    <p class="copyright">© 2020 Profile</p>
   </footer>
 </body>
 </html>
