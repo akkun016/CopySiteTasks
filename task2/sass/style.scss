@@ -1,0 +1,156 @@
+// 命名規則：BEM
+@charset 'utf-8';
+$main-color: rgb(30, 30, 30);
+$border-color: rgb(200, 200, 200);
+
+html {
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+div, h1, h2, h3, h4, h5, p, span {
+  color: $main-color;
+}
+
+// 小見出し
+@mixin Subheading {
+  padding-bottom: 0.3rem;
+  margin-bottom: 18px;
+  border-bottom: $border-color 1px solid;
+  font-size: 1.3rem;
+}
+
+// リストのアンダーライン
+@mixin ListBorder {
+  padding: 6px 0;
+  border-bottom: $border-color 1px dotted;
+}
+
+
+
+.main1 {
+  &__top {
+    &__left-contents {
+      width: 50%;
+      &__food-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__right-contents {
+      &__inner {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 40px;
+        &__name {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+        }
+        &__comment {
+          font-size: 1rem;
+          margin-bottom: 30px;
+        }
+        &__ingredients {
+          @include Subheading;
+        }
+        &__ingredients-lists {
+          list-style: none;
+          margin-bottom: 40px;
+          li {
+            @include ListBorder;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        &__recipe {
+          @include Subheading;
+        }
+        &__recipe-lists {
+          list-style: decimal;
+          li {
+            @include ListBorder;
+            margin-left: 20px;
+            p {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__bottom {
+    margin: 80px 0 110px 0;
+    text-align: center;
+    a {
+      padding: 20px 60px;
+      border: $main-color 1px solid;
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: $main-color;
+    }
+  }
+}
+
+@media screen and (min-width: 836px) {
+  .main1 {
+    &__top {
+      display: flex;
+      &__left-contents {
+        max-height: 700px;
+      }
+      &__right-contents {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .main1 {
+    &__top {
+      &__left-contents {
+        width: 100vw;
+      }
+      &__right-contents {
+        width: 100%;
+        &__inner {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+.footer1 {
+  width: 100%;
+  text-align: center;
+  &__top-links {
+    margin-bottom: 10px;
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      li {
+        margin-right: 20px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          font-size: 0.7rem;
+          color: $main-color;
+        }
+      }
+    }
+  }
+  &__copyright {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+  } 
+}

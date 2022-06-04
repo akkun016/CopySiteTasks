@@ -1,0 +1,125 @@
+html {
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.main1__top__left-contents {
+  width: 50%;
+}
+.main1__top__left-contents__food-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.main1__top__right-contents__inner {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.main1__top__right-contents__inner__name {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.main1__top__right-contents__inner__comment {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+.main1__top__right-contents__inner__ingredients {
+  padding-bottom: 0.3rem;
+  margin-bottom: 18px;
+  border-bottom: rgb(200, 200, 200) 1px solid;
+  font-size: 1.3rem;
+}
+.main1__top__right-contents__inner__ingredients-lists {
+  list-style: none;
+  margin-bottom: 40px;
+}
+.main1__top__right-contents__inner__ingredients-lists li {
+  padding: 6px 0;
+  border-bottom: rgb(200, 200, 200) 1px dotted;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.main1__top__right-contents__inner__recipe {
+  padding-bottom: 0.3rem;
+  margin-bottom: 18px;
+  border-bottom: rgb(200, 200, 200) 1px solid;
+  font-size: 1.3rem;
+}
+.main1__top__right-contents__inner__recipe-lists {
+  list-style: decimal;
+}
+.main1__top__right-contents__inner__recipe-lists li {
+  padding: 6px 0;
+  border-bottom: rgb(200, 200, 200) 1px dotted;
+  margin-left: 20px;
+}
+.main1__top__right-contents__inner__recipe-lists li p {
+  display: inline-block;
+}
+.main1__bottom {
+  margin: 80px 0 110px 0;
+  text-align: center;
+}
+.main1__bottom a {
+  padding: 20px 60px;
+  border: black 1px solid;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: black;
+}
+
+@media screen and (min-width: 836px) {
+  .main1__top {
+    display: flex;
+  }
+  .main1__top__left-contents {
+    max-height: 700px;
+  }
+  .main1__top__right-contents {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 835px) {
+  .main1__top__left-contents {
+    width: 100vw;
+  }
+  .main1__top__right-contents {
+    width: 100%;
+  }
+  .main1__top__right-contents__inner {
+    width: 90%;
+  }
+}
+.footer1 {
+  width: 100%;
+  text-align: center;
+}
+.footer1__top-links {
+  margin-bottom: 10px;
+}
+.footer1__top-links ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.footer1__top-links ul li {
+  margin-right: 20px;
+}
+.footer1__top-links ul li:last-child {
+  margin-right: 0;
+}
+.footer1__top-links ul li a {
+  font-size: 0.7rem;
+  color: black;
+}
+.footer1__copyright {
+  font-size: 0.7rem;
+  margin-bottom: 20px;
+}
