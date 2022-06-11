@@ -15,7 +15,7 @@ div, h1, h2, h3, h4, h5, p, span {
 }
 
 .top-content {
-  margin-top: 50px;
+  margin-top: 4%;
   text-align: center;
 }
 .top-content__img {
@@ -31,44 +31,43 @@ div, h1, h2, h3, h4, h5, p, span {
   display: flex;
 }
 .header1__inner__title {
-  font-size: 0.8rem;
+  width: 110px;
   margin-right: 50px;
 }
-.header1__inner ul {
+.header1__inner nav ul {
   display: flex;
 }
-.header1__inner ul li {
+.header1__inner nav ul li {
+  font-size: 0.875rem;
   list-style: none;
   margin-right: 30px;
 }
-.header1__inner ul li a {
-  font-size: 0.8rem;
+.header1__inner nav ul li a {
   color: rgb(35, 35, 35);
   text-decoration: none;
 }
-.header1__inner ul li:last-child {
+.header1__inner nav ul li:last-child {
   margin-right: 0;
 }
 
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 18px;
 }
 .wrapper .main1 {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .wrapper .main1__content1 {
   margin-bottom: 60px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .wrapper .main1__content1__img {
   width: 50%;
 }
 .wrapper .main1__content1__explanation {
-  padding: 0 70px;
+  padding: 0 7%;
 }
 .wrapper .main1__content1__explanation h2 {
   font-size: 1.5rem;
@@ -80,18 +79,17 @@ div, h1, h2, h3, h4, h5, p, span {
 }
 .wrapper .main1__content1__explanation__text {
   font-size: 1rem;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 .wrapper .main1__content2 {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .wrapper .main1__content2__img {
   width: 50%;
 }
 .wrapper .main1__content2__explanation {
-  padding: 0 70px;
+  padding: 0 7%;
 }
 .wrapper .main1__content2__explanation h2 {
   font-size: 1.5rem;
@@ -103,18 +101,18 @@ div, h1, h2, h3, h4, h5, p, span {
 }
 .wrapper .main1__content2__explanation__text {
   font-size: 1rem;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 .wrapper .footer1 {
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
 }
-.wrapper .footer1__title {
-  font-size: 0.8rem;
+.wrapper .footer1 img {
+  width: 110px;
 }
 .wrapper .footer1__copyright {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 
 @media screen and (max-width: 768px) {
