@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 100%;
 }
@@ -6,7 +7,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Hoefler Text";
+  font-family: "Hoefler Text", "MS 明朝", serif;
 }
 
 div, h1, h2, h3, h4, h5, p, span {
@@ -58,10 +59,10 @@ div, h1, h2, h3, h4, h5, p, span {
   margin-bottom: 100px;
 }
 .wrapper .main1__content1 {
+  margin-bottom: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
 }
 .wrapper .main1__content1__img {
   width: 50%;
@@ -71,6 +72,7 @@ div, h1, h2, h3, h4, h5, p, span {
 }
 .wrapper .main1__content1__explanation h2 {
   font-size: 1.5rem;
+  font-weight: normal;
 }
 .wrapper .main1__content1__explanation__tag {
   font-size: 0.9rem;
@@ -93,6 +95,7 @@ div, h1, h2, h3, h4, h5, p, span {
 }
 .wrapper .main1__content2__explanation h2 {
   font-size: 1.5rem;
+  font-weight: normal;
 }
 .wrapper .main1__content2__explanation__tag {
   font-size: 0.9rem;
@@ -112,4 +115,54 @@ div, h1, h2, h3, h4, h5, p, span {
 }
 .wrapper .footer1__copyright {
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .top-content {
+    margin: 0;
+  }
+  .top-content__img {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .header1 {
+    padding: 20px 0 50px;
+  }
+
+  .wrapper .main1__content1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .main1__content1__img {
+    width: 100%;
+  }
+  .wrapper .main1__content1__explanation {
+    padding: 10px 0 0 0;
+  }
+  .wrapper .main1__content1__explanation h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+  .wrapper .main1__content1__explanation__text {
+    margin-top: 30px;
+  }
+  .wrapper .main1__content2 {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .wrapper .main1__content2__img {
+    width: 100%;
+  }
+  .wrapper .main1__content2__explanation {
+    padding: 10px 0 0 0;
+  }
+  .wrapper .main1__content2__explanation h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+  .wrapper .main1__content2__explanation__text {
+    margin-top: 30px;
+  }
 }

@@ -11,7 +11,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Hoefler Text';
+  font-family: 'Hoefler Text', 'MS 明朝', serif;
 }
 
 div, h1, h2, h3, h4, h5, p, span {
@@ -54,37 +54,39 @@ div, h1, h2, h3, h4, h5, p, span {
   }
 }
 
+@mixin MainSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__img {
+    width: 50%;
+  }
+  &__explanation {
+    padding: 0 70px;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+    &__tag {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    &__text {
+      font-size: 1rem;
+      margin-top: 40px;
+    }
+  }
+}
+
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
   .main1 {
     margin-bottom: 100px;
-    @mixin MainSection {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &__img {
-        width: 50%;
-      }
-      &__explanation {
-        padding: 0 70px;
-        h2 {
-          font-size: 1.5rem;
-        }
-        &__tag {
-          font-size: 0.9rem;
-          margin-top: 10px;
-        }
-        &__text {
-          font-size: 1rem;
-          margin-top: 40px;
-        }
-      }
-    }
     &__content1 {
-      @include MainSection;
       margin-bottom: 60px;
+      @include MainSection;
     }
     &__content2 {
       @include MainSection;
@@ -99,6 +101,52 @@ div, h1, h2, h3, h4, h5, p, span {
     }
     &__copyright {
       font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-content {
+    margin: 0;
+    &__img {
+      height: 50vh;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .header1 {
+    padding: 20px 0 50px;
+  }
+
+  @mixin MainSection {
+    &__img {
+      width: 100%;
+    }
+    &__explanation {
+      padding: 10px 0 0 0;
+      h2 {
+        font-size: 1.3rem;
+        font-weight: normal;
+      }
+      &__text {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .wrapper {
+    .main1 {
+      &__content1 {
+        flex-direction: column;
+        align-items: flex-start;
+        @include MainSection;
+      }
+      &__content2 {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        @include MainSection;
+      }
     }
   }
 }
