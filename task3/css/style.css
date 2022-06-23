@@ -55,55 +55,33 @@ div, h1, h2, h3, h4, h5, p, span {
   margin: 0 auto;
   padding: 0 18px;
 }
-.container .main {
-  margin-bottom: 80px;
+.container .main__article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
 }
-.container .main .main-img {
+.container .main__article__img {
   width: 50%;
 }
-.container .main__concept {
-  margin-bottom: 60px;
-  display: flex;
-  align-items: center;
-}
-.container .main__concept__explanation {
+.container .main__article__explanation {
   padding: 0 7%;
 }
-.container .main__concept__explanation h2 {
+.container .main__article__explanation h2 {
   font-size: 1.5rem;
   font-weight: normal;
 }
-.container .main__concept__explanation--tag {
+.container .main__article__explanation--tag {
   font-size: 0.9rem;
   margin-top: 10px;
 }
-.container .main__concept__explanation--text {
-  font-size: 1rem;
-  margin-top: 25px;
-}
-.container .main__work {
-  display: flex;
-  align-items: center;
-}
-.container .main__work__explanation {
-  padding: 0 7%;
-}
-.container .main__work__explanation h2 {
-  font-size: 1.5rem;
-  font-weight: normal;
-}
-.container .main__work__explanation--tag {
-  font-size: 0.9rem;
-  margin-top: 10px;
-}
-.container .main__work__explanation--text {
+.container .main__article__explanation--text {
   font-size: 1rem;
   margin-top: 25px;
 }
 .container .footer {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 .container .footer img {
   width: 110px;
@@ -126,35 +104,24 @@ div, h1, h2, h3, h4, h5, p, span {
     padding: 20px 0 50px;
   }
 
-  .container .main .main-img {
+  .container .main__article {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .container .main__article:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+  .container .main__article__img {
     width: 100%;
   }
-  .container .main__concept {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .container .main__concept__explanation {
+  .container .main__article__explanation {
     padding: 10px 0 0 0;
   }
-  .container .main__concept__explanation h2 {
+  .container .main__article__explanation h2 {
     font-size: 1.3rem;
     font-weight: normal;
   }
-  .container .main__concept__explanation--text {
-    margin-top: 30px;
-  }
-  .container .main__work {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-  .container .main__work__explanation {
-    padding: 10px 0 0 0;
-  }
-  .container .main__work__explanation h2 {
-    font-size: 1.3rem;
-    font-weight: normal;
-  }
-  .container .main__work__explanation--text {
+  .container .main__article__explanation--text {
     margin-top: 30px;
   }
 }

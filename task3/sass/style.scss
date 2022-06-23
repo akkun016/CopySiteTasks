@@ -56,47 +56,39 @@ div, h1, h2, h3, h4, h5, p, span {
   }
 }
 
-@mixin MainSection {
-  display: flex;
-  align-items: center;
-  &__explanation {
-    padding: 0 7%;
-    h2 {
-      font-size: 1.5rem;
-      font-weight: normal;
-    }
-    &--tag {
-      font-size: 0.9rem;
-      margin-top: 10px;
-    }
-    &--text {
-      font-size: 1rem;
-      margin-top: 25px;
-    }
-  }
-}
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 18px;
   .main {
-    .main-img {
-      width: 50%;
-    }
-    margin-bottom: 80px;
-    &__concept {
+    &__article {
+      display: flex;
+      align-items: center;
       margin-bottom: 60px;
-      @include MainSection;
-    }
-    &__work {
-      @include MainSection;
+      &__img {
+        width: 50%;
+      }
+      &__explanation {
+        padding: 0 7%;
+        h2 {
+          font-size: 1.5rem;
+          font-weight: normal;
+        }
+        &--tag {
+          font-size: 0.9rem;
+          margin-top: 10px;
+        }
+        &--text {
+          font-size: 1rem;
+          margin-top: 25px;
+        }
+      }
     }
   }
   .footer {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
+    padding: 20px 0;
     img {
       width: 110px;
     }
@@ -120,32 +112,27 @@ div, h1, h2, h3, h4, h5, p, span {
     padding: 20px 0 50px;
   }
 
-  @mixin MainSection {
-    align-items: flex-start;
-    &__explanation {
-      padding: 10px 0 0 0;
-      h2 {
-        font-size: 1.3rem;
-        font-weight: normal;
-      }
-      &--text {
-        margin-top: 30px;
-      }
-    }
-  }
-
   .container {
     .main {
-      .main-img {
-        width: 100%;
-      }
-      &__concept {
+      &__article {
+        align-items: flex-start;
         flex-direction: column;
-        @include MainSection;
-      }
-      &__work {
-        flex-direction: column-reverse;
-        @include MainSection;
+        &:nth-child(2n) {
+          flex-direction: column-reverse;
+        }
+        &__img {
+          width: 100%;
+        }
+        &__explanation {
+          padding: 10px 0 0 0;
+          h2 {
+            font-size: 1.3rem;
+            font-weight: normal;
+          }
+          &--text {
+            margin-top: 30px;
+          }
+        }
       }
     }
   }
