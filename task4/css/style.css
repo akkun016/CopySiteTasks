@@ -1,0 +1,272 @@
+html {
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(49, 49, 49);
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+
+p {
+  font-size: 0.88rem;
+}
+
+.visual-img {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.visual-img__logo {
+  background-color: rgb(49, 49, 49);
+  padding: 0 10px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.visual-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main .section-btn {
+  padding: 12px 36px;
+  border: rgb(49, 49, 49) 1px solid;
+  display: inline-block;
+  color: rgb(49, 49, 49);
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+.main .section-btn:hover {
+  opacity: 0.75;
+}
+.main .articles {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 5%;
+  text-align: center;
+}
+.main .articles__title {
+  margin-bottom: 20px;
+}
+.main .articles__text {
+  margin-bottom: 40px;
+}
+.main .articles__info {
+  width: 100%;
+  display: flex;
+}
+.main .articles__info .info-block {
+  width: 49%;
+  position: relative;
+}
+.main .articles__info .info-block:hover {
+  opacity: 0.7;
+}
+.main .articles__info .info-block:last-child {
+  margin-left: 2%;
+}
+.main .articles__info .info-block__text {
+  background-color: rgba(15, 15, 15, 0.5);
+  padding: 16px 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  white-space: nowrap;
+}
+.main .articles__info .info-block__text h3 {
+  font-size: 1.2rem;
+}
+.main .articles__info .info-block__text p {
+  font-size: 0.88rem;
+  font-weight: bold;
+}
+.main .articles__info .info-block__img {
+  width: 100%;
+}
+.main .fashions {
+  height: 500px;
+  width: 100vw;
+  background-image: url("https://placehold.jp/1400x600.png");
+  background-position: center;
+  margin-bottom: 80px;
+  padding-top: 50px;
+  text-align: center;
+  object-fit: cover;
+}
+.main .fashions__title {
+  margin-bottom: 20px;
+}
+.main .fashions__text {
+  margin-bottom: 30px;
+}
+.main .catalog-etc {
+  background-color: #f6f6f6;
+}
+.main .catalog-etc__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 5%;
+}
+.main .catalog-etc__inner .catlog-etc-post {
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .catalog-etc__inner .catlog-etc-post:last-child {
+  margin-bottom: 0;
+}
+.main .catalog-etc__inner .catlog-etc-post__img {
+  height: 48%;
+  width: 48%;
+}
+.main .catalog-etc__inner .catlog-etc-post__text {
+  width: 48%;
+}
+.main .catalog-etc__inner .catlog-etc-post__text h2 {
+  margin-bottom: 40px;
+  font-size: 1.35rem;
+  text-align: center;
+}
+.main .catalog-etc__inner .catlog-etc-post__text p {
+  margin-bottom: 30px;
+  font-size: 0.88rem;
+}
+.main .catalog-etc__inner .catlog-etc-post__text p:last-child {
+  margin-bottom: 0;
+}
+.main .catalog-etc__inner .catlog-etc-post__text__btn-block {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.footer {
+  width: 100vw;
+}
+.footer__nav-wrap {
+  background-color: rgb(49, 49, 49);
+}
+.footer__nav-wrap__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.footer__nav-wrap__inner .footer-nav {
+  height: 360px;
+  padding: 100px 0;
+  display: flex;
+  color: #ffffff;
+}
+.footer__nav-wrap__inner .footer-nav__left {
+  width: 33.3%;
+  padding-top: 65px;
+}
+.footer__nav-wrap__inner .footer-nav__left a {
+  background-color: rgb(37, 37, 37);
+  padding: 8px 12px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer__nav-wrap__inner .footer-nav__middle {
+  width: 33.3%;
+}
+.footer__nav-wrap__inner .footer-nav__middle h3 {
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+.footer__nav-wrap__inner .footer-nav__middle ul {
+  font-size: 0.75rem;
+}
+.footer__nav-wrap__inner .footer-nav__middle ul li {
+  margin-bottom: 8px;
+  list-style: inside "- ";
+}
+.footer__nav-wrap__inner .footer-nav__middle ul li:last-child {
+  margin-bottom: 0;
+}
+.footer__nav-wrap__inner .footer-nav__right {
+  width: 33.3%;
+}
+.footer__nav-wrap__inner .footer-nav__right h3 {
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+.footer__nav-wrap__inner .footer-nav__right p {
+  line-height: 1.5rem;
+  font-size: 0.75rem;
+}
+.footer__copyright {
+  background-color: #ffffff;
+  padding: 28px 0;
+  text-align: center;
+}
+.footer__copyright p {
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 896px) {
+  .main .articles__info {
+    flex-direction: column;
+  }
+  .main .articles__info .info-block {
+    width: 100%;
+  }
+  .main .articles__info .info-block:last-child {
+    margin: 30px 0 0 0;
+  }
+  .main .catalog-etc__inner {
+    padding: 30px 5%;
+  }
+  .main .catalog-etc__inner .catlog-etc-post {
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+  .main .catalog-etc__inner .catlog-etc-post__img {
+    width: 100%;
+  }
+  .main .catalog-etc__inner .catlog-etc-post__img:last-child {
+    margin-top: 60px;
+  }
+  .main .catalog-etc__inner .catlog-etc-post__text {
+    width: 100%;
+  }
+  .main .catalog-etc__inner .catlog-etc-post__text h2 {
+    margin-top: 60px;
+  }
+  .footer__nav-wrap__inner .footer-nav {
+    height: auto;
+    padding: 30px 0 60px;
+    flex-direction: column;
+  }
+  .footer__nav-wrap__inner .footer-nav__left {
+    width: 100%;
+    padding-top: 0;
+    text-align: center;
+  }
+  .footer__nav-wrap__inner .footer-nav__middle {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .footer__nav-wrap__inner .footer-nav__right {
+    width: 100%;
+    margin-top: 40px;
+  }
+}

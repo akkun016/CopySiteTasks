@@ -1,0 +1,295 @@
+// 命名規則：BEM
+@charset 'utf-8';
+
+$main-color: rgb(49, 49, 49);
+$white-text: #ffffff;
+$inner-width: 1200px;
+
+html {
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $main-color;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+
+p {
+  font-size: 0.88rem;
+}
+
+.visual-img {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  &__logo {
+    background-color: $main-color;
+    padding: 0 10px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: $white-text;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.main {
+  .section-btn {
+    padding: 12px 36px;
+    border: $main-color 1px solid;
+    display: inline-block;
+    color: $main-color;
+    font-size: 0.7rem;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  .articles {
+    max-width: $inner-width;
+    margin: 0 auto;
+    padding: 80px 5%;
+    text-align: center;
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__text {
+      margin-bottom: 40px;
+    }
+    &__info {
+      width: 100%;
+      display: flex;
+      .info-block {
+        width: 49%;
+        position: relative;
+        &:hover {
+          opacity: 0.7;
+        }
+        &:last-child {
+          margin-left: 2%;
+        }
+        &__text {
+          background-color: rgba(15, 15, 15, 0.5);
+          padding: 16px 30px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $white-text;
+          white-space: nowrap;
+          h3 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 0.88rem;
+            font-weight: bold;
+          }
+        }
+        &__img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .fashions {
+    height: 500px;
+    width: 100vw;
+    background-image: url("https://placehold.jp/1400x600.png");
+    background-position: center;
+    margin-bottom: 80px;
+    padding-top: 50px;
+    text-align: center;
+    object-fit: cover;
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__text {
+      margin-bottom: 30px;
+    }
+  }
+  .catalog-etc {
+    background-color: #f6f6f6;
+    &__inner {
+      max-width: $inner-width;
+      margin: 0 auto;
+      padding: 60px 5%;
+      .catlog-etc-post {
+        margin-bottom: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &__img {
+          height: 48%;
+          width: 48%;
+        }
+        &__text {
+          width: 48%;
+          h2 {
+            margin-bottom: 40px;
+            font-size: 1.35rem;
+            text-align: center;
+          }
+          p {
+            margin-bottom: 30px;
+            font-size: 0.88rem;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          &__btn-block {
+            width: 100%;
+            text-align: center;
+            padding-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100vw;
+  &__nav-wrap {
+    background-color: $main-color;
+    &__inner {
+      max-width: $inner-width;
+      margin: 0 auto;
+      padding: 0 5%;
+      .footer-nav {
+        height: 360px;
+        padding: 100px 0;
+        display: flex;
+        color: $white-text;
+        &__left {
+          width: 33.3%;
+          padding-top: 65px;
+          a {
+            background-color: rgb(37, 37, 37);
+            padding: 8px 12px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: $white-text;
+            text-decoration: none;
+          }
+        }
+        @mixin footerTitle {
+          font-size: 1rem;
+          margin-bottom: 18px;
+        }
+        &__middle {
+          width: 33.3%;
+          h3 {
+            @include footerTitle;
+          }
+          ul {
+            font-size: 0.75rem;
+            li {
+              margin-bottom: 8px;
+              list-style: inside '- ';
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        &__right {
+          width: 33.3%;
+          h3 {
+            @include footerTitle;
+          }
+          p {
+            line-height: 1.5rem;
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  &__copyright {
+    background-color: #ffffff;
+    padding: 28px 0;
+    text-align: center;
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .main {
+    .articles {
+      &__info {
+        flex-direction: column;
+        .info-block {
+          width: 100%;
+          &:last-child {
+            margin: 30px 0 0 0;
+          }
+        }
+      }
+    }
+    .catalog-etc {
+      &__inner {
+        padding: 30px 5%;
+        .catlog-etc-post {
+          margin-bottom: 0;
+          flex-direction: column;
+          &__img {
+            width: 100%;
+            &:last-child {
+              margin-top: 60px;
+            }
+          }
+          &__text {
+            width: 100%;
+            h2 {
+              margin-top: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    &__nav-wrap {
+      &__inner {
+        .footer-nav {
+          height: auto;
+          padding: 30px 0 60px;
+          flex-direction: column;
+          &__left {
+            width: 100%;
+            padding-top: 0;
+            text-align: center;
+          }
+          &__middle {
+            width: 100%;
+            margin-top: 40px;
+          }
+          &__right {
+            width: 100%;
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}
