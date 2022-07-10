@@ -1,7 +1,7 @@
 // 命名規則：BEM
 @charset 'utf-8';
 
-$main-color: rgb(49, 49, 49);
+$main-color: #333;
 $white-text: #ffffff;
 $inner-width: 1200px;
 
@@ -17,10 +17,11 @@ html {
 
 body {
   color: $main-color;
+  font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 }
 
 h2 {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
 }
 
 p {
@@ -30,27 +31,16 @@ p {
 .visual-img {
   height: 100vh;
   width: 100vw;
-  position: relative;
+  background: no-repeat center/cover url("https://placehold.jp/1400x800.png");
   &__logo {
-    background-color: $main-color;
-    padding: 0 10px;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 1.7rem;
-    font-weight: bold;
-    color: $white-text;
-  }
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    float: right;
+    margin: 30px 30px 0 0;
   }
 }
 
 .main {
   .section-btn {
-    padding: 12px 36px;
+    padding: 14px 36px;
     border: $main-color 1px solid;
     display: inline-block;
     color: $main-color;
@@ -74,18 +64,16 @@ p {
     &__info {
       width: 100%;
       display: flex;
+      justify-content: space-between;
       .info-block {
         width: 49%;
         position: relative;
         &:hover {
           opacity: 0.7;
         }
-        &:last-child {
-          margin-left: 2%;
-        }
         &__text {
-          background-color: rgba(15, 15, 15, 0.5);
-          padding: 16px 30px;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 15px 30px;
           position: absolute;
           top: 50%;
           left: 50%;
@@ -93,7 +81,8 @@ p {
           color: $white-text;
           white-space: nowrap;
           h3 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            margin-bottom: 2px;
           }
           p {
             font-size: 0.88rem;
@@ -144,7 +133,6 @@ p {
           width: 48%;
           h2 {
             margin-bottom: 40px;
-            font-size: 1.35rem;
             text-align: center;
           }
           p {
@@ -167,68 +155,46 @@ p {
 
 .footer {
   width: 100vw;
-  &__nav-wrap {
-    background-color: $main-color;
-    &__inner {
-      max-width: $inner-width;
-      margin: 0 auto;
-      padding: 0 5%;
-      .footer-nav {
-        height: 360px;
-        padding: 100px 0;
-        display: flex;
-        color: $white-text;
-        &__left {
-          width: 33.3%;
-          padding-top: 65px;
-          a {
-            background-color: rgb(37, 37, 37);
-            padding: 8px 12px;
-            font-size: 1.6rem;
-            font-weight: bold;
-            color: $white-text;
-            text-decoration: none;
-          }
+  background-color: $main-color;
+  .footer-nav {
+    height: 360px;
+    max-width: $inner-width;
+    margin: 0 auto;
+    padding: 100px 5%;
+    display: flex;
+    color: $white-text;
+    &__item {
+      width: 33.3%;
+      line-height: 2;
+      &--left {
+        padding: 60px 0;
+      }
+      a {
+        &:hover {
+          opacity: 0.8;
         }
-        @mixin footerTitle {
-          font-size: 1rem;
-          margin-bottom: 18px;
+      }
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+      ul {
+        font-size: 0.75rem;
+        li {
+          list-style: inside '- ';
         }
-        &__middle {
-          width: 33.3%;
-          h3 {
-            @include footerTitle;
-          }
-          ul {
-            font-size: 0.75rem;
-            li {
-              margin-bottom: 8px;
-              list-style: inside '- ';
-              &:last-child {
-                margin-bottom: 0;
-              }
-            }
-          }
-        }
-        &__right {
-          width: 33.3%;
-          h3 {
-            @include footerTitle;
-          }
-          p {
-            line-height: 1.5rem;
-            font-size: 0.75rem;
-          }
-        }
+      }
+      p {
+        font-size: 0.75rem;
       }
     }
   }
-  &__copyright {
+  .copyright {
     background-color: #ffffff;
-    padding: 28px 0;
+    padding: 30px 0;
     text-align: center;
     p {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
     }
   }
 }
@@ -269,25 +235,17 @@ p {
     }
   }
   .footer {
-    &__nav-wrap {
-      &__inner {
-        .footer-nav {
-          height: auto;
-          padding: 30px 0 60px;
-          flex-direction: column;
-          &__left {
-            width: 100%;
-            padding-top: 0;
-            text-align: center;
-          }
-          &__middle {
-            width: 100%;
-            margin-top: 40px;
-          }
-          &__right {
-            width: 100%;
-            margin-top: 40px;
-          }
+    .footer-nav {
+      height: auto;
+      padding: 30px 5% 60px;
+      flex-direction: column;
+      &__item {
+        width: 100%;
+        margin-top: 30px;
+        &--left {
+          text-align: center;
+          margin-top: 0;
+          padding-top: 0;
         }
       }
     }
