@@ -111,42 +111,36 @@ p {
       margin-bottom: 30px;
     }
   }
-  .catalog-etc {
+  .catlog-etc-post {
     background-color: #f6f6f6;
-    &__inner {
+    padding: 60px 0;
+    .post-inner {
       max-width: $inner-width;
       margin: 0 auto;
-      padding: 60px 5%;
-      .catlog-etc-post {
-        margin-bottom: 120px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &:last-child {
-          margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__img {
+        height: 48%;
+        width: 48%;
+      }
+      &__text {
+        width: 48%;
+        h2 {
+          margin-bottom: 40px;
+          text-align: center;
         }
-        &__img {
-          height: 48%;
-          width: 48%;
+        p {
+          margin-bottom: 30px;
+          font-size: 0.88rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
-        &__text {
-          width: 48%;
-          h2 {
-            margin-bottom: 40px;
-            text-align: center;
-          }
-          p {
-            margin-bottom: 30px;
-            font-size: 0.88rem;
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-          &__btn-block {
-            width: 100%;
-            text-align: center;
-            padding-top: 30px;
-          }
+        &--btn {
+          width: 100%;
+          text-align: center;
+          padding-top: 30px;
         }
       }
     }
@@ -212,24 +206,20 @@ p {
         }
       }
     }
-    .catalog-etc {
-      &__inner {
-        padding: 30px 5%;
-        .catlog-etc-post {
-          margin-bottom: 0;
-          flex-direction: column;
-          &__img {
-            width: 100%;
-            &:last-child {
-              margin-top: 60px;
-            }
+    .catlog-etc-post {
+      padding: 30px 5%;
+      .post-inner {
+        flex-direction: column;
+        &__img {
+          width: 100%;
+          margin-bottom: 60px;
+          &:last-child {
+            margin-top: 60px;
+            margin-bottom: 0;
           }
-          &__text {
-            width: 100%;
-            h2 {
-              margin-top: 60px;
-            }
-          }
+        }
+        &__text {
+          width: 100%;
         }
       }
     }
@@ -237,15 +227,14 @@ p {
   .footer {
     .footer-nav {
       height: auto;
-      padding: 30px 5% 60px;
+      padding: 30px 5%;
       flex-direction: column;
       &__item {
         width: 100%;
-        margin-top: 30px;
+        margin-bottom: 30px;
         &--left {
           text-align: center;
-          margin-top: 0;
-          padding-top: 0;
+          padding: 0;
         }
       }
     }

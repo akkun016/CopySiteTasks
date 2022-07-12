@@ -103,42 +103,36 @@ p {
 .main .fashions__text {
   margin-bottom: 30px;
 }
-.main .catalog-etc {
+.main .catlog-etc-post {
   background-color: #f6f6f6;
+  padding: 60px 0;
 }
-.main .catalog-etc__inner {
+.main .catlog-etc-post .post-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 5%;
-}
-.main .catalog-etc__inner .catlog-etc-post {
-  margin-bottom: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main .catalog-etc__inner .catlog-etc-post:last-child {
-  margin-bottom: 0;
-}
-.main .catalog-etc__inner .catlog-etc-post__img {
+.main .catlog-etc-post .post-inner__img {
   height: 48%;
   width: 48%;
 }
-.main .catalog-etc__inner .catlog-etc-post__text {
+.main .catlog-etc-post .post-inner__text {
   width: 48%;
 }
-.main .catalog-etc__inner .catlog-etc-post__text h2 {
+.main .catlog-etc-post .post-inner__text h2 {
   margin-bottom: 40px;
   text-align: center;
 }
-.main .catalog-etc__inner .catlog-etc-post__text p {
+.main .catlog-etc-post .post-inner__text p {
   margin-bottom: 30px;
   font-size: 0.88rem;
 }
-.main .catalog-etc__inner .catlog-etc-post__text p:last-child {
+.main .catlog-etc-post .post-inner__text p:last-child {
   margin-bottom: 0;
 }
-.main .catalog-etc__inner .catlog-etc-post__text__btn-block {
+.main .catlog-etc-post .post-inner__text--btn {
   width: 100%;
   text-align: center;
   padding-top: 30px;
@@ -198,37 +192,34 @@ p {
   .main .articles__info .info-block:last-child {
     margin: 30px 0 0 0;
   }
-  .main .catalog-etc__inner {
+  .main .catlog-etc-post {
     padding: 30px 5%;
   }
-  .main .catalog-etc__inner .catlog-etc-post {
-    margin-bottom: 0;
+  .main .catlog-etc-post .post-inner {
     flex-direction: column;
   }
-  .main .catalog-etc__inner .catlog-etc-post__img {
+  .main .catlog-etc-post .post-inner__img {
     width: 100%;
+    margin-bottom: 60px;
   }
-  .main .catalog-etc__inner .catlog-etc-post__img:last-child {
+  .main .catlog-etc-post .post-inner__img:last-child {
     margin-top: 60px;
+    margin-bottom: 0;
   }
-  .main .catalog-etc__inner .catlog-etc-post__text {
+  .main .catlog-etc-post .post-inner__text {
     width: 100%;
-  }
-  .main .catalog-etc__inner .catlog-etc-post__text h2 {
-    margin-top: 60px;
   }
   .footer .footer-nav {
     height: auto;
-    padding: 30px 5% 60px;
+    padding: 30px 5%;
     flex-direction: column;
   }
   .footer .footer-nav__item {
     width: 100%;
-    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .footer .footer-nav__item--left {
     text-align: center;
-    margin-top: 0;
-    padding-top: 0;
+    padding: 0;
   }
 }
