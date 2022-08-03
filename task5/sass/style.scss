@@ -1,0 +1,356 @@
+// 命名規則：BEM
+@charset 'utf-8';
+
+$black: rgb(40, 40, 40);
+
+html {
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+}
+
+header {
+  position: relative;
+  .header-inner {
+    height: 80px;
+    margin: 0 0 0 auto;
+    padding-left: 15px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    .header-left {
+      margin: 0 auto 0 max(50vw - 600px, 0px);
+      display: flex;
+      align-items: center;
+      &__title {
+        margin-right: 40px;
+        font-size: 2.2rem;
+        color: black;
+        letter-spacing: 0.6rem;
+        line-height: 100%;
+        text-decoration: none;
+      }
+      &__nav {
+        ul {
+          display: flex;
+          li {
+            margin-right: 20px;
+            list-style: none;
+            &:last-child {
+              margin-right: 0;
+            }
+            a {
+              font-size: 0.9rem;
+              color: black;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .header-right {
+      a {
+        display: block;
+        background-color: black;
+        padding: 30px 62px;
+        font-size: 0.8rem;
+        color: #ffffff;
+        text-decoration: none;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+main {
+  background-color: #f4f4f4;
+  .section-title {
+    h1 {
+      font-size: 2.2rem;
+      font-weight: normal;
+      letter-spacing: 0.8rem;
+      line-height: 2.2rem;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 0.8rem;
+      margin-bottom: 30px;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 40px;
+      border-bottom: solid 1px rgb(40, 40, 40);
+      margin-bottom: 60px;
+    }
+  }
+  .visual-img {
+    height: calc(100vh - 80px);
+    width: 100vw;
+    object-fit: cover;
+  }
+  .news {
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 0 15px;
+    .announce {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      &__item {
+        width: 33%;
+        padding: 20px 0 20px 20px;
+        border-right: solid 1px $black;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          border: none;
+        }
+        .item-top {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          &__tag {
+            width: 55px;
+            background-color: $black;
+            margin-left: 20px;
+            text-align: center;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .about {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 120px;
+    &__img {
+      height: 420px;
+      width: 55%;
+      object-fit: cover;
+    }
+    &__content {
+      padding: 0 5%;
+      p {
+        font-size: 0.85rem;
+        line-height: 2;
+      }
+    }
+  }
+  .business {
+    max-width:1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+    .business-contents {
+      display: flex;
+      justify-content: center;
+      .business-content {
+        margin: 0 30px;
+        &--left {
+          padding-top: 80px;
+        }
+        &__item {
+          margin-bottom: 50px;
+          p {
+            display: flex;
+            font-size: 0.9rem;
+            font-weight: bold;
+            &::before {
+              content: "";
+              display: block;
+              height: 1px;
+              width: 8px;
+              background-color: $black;
+              margin: 10px 10px 0 0;
+            }
+          }
+          img {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .company {
+    display: flex;
+    justify-content: center;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding:0 15px 120px 15px;
+    &__text {
+      max-width: 47%;
+      .company-inner {
+        width: 90%;
+        padding: 100px 15%;
+        background-color: #ffffff;
+        box-sizing: content-box;
+        &__info {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          font-size: 0.85rem;
+          line-height: 2;
+          dt {
+            width: 20%;
+          }
+          dd {
+            width: 80%;
+          }
+        }
+      }
+    }
+    &__img {
+      height: 400px;
+      width: 53%;
+      margin-top: 100px;
+    }
+  }
+}
+
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+  .footer-top  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    &__left {
+
+      h1 {
+        font-size: 2.2rem;
+        font-weight: lighter;
+        letter-spacing: 0.6rem;
+      }
+    }
+    &__right {
+      font-size: 0.85rem;
+    }
+  }
+  .footer-bottom {
+    font-size: 0.65rem;
+    padding-bottom: 20px;
+  }
+}
+
+// スマホ
+@media screen and (max-width: 900px) {
+  header {
+    .header-inner {
+      .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        &__title {
+          font-size: 1.6rem;
+        }
+      }
+      .header-right {
+        display: none;
+      }
+    }
+  }
+
+  main {
+    .section-title {
+      &::after {
+        margin-bottom: 30px;
+      }
+    }
+    .news {
+      margin: 80px 0;
+      .announce {
+        flex-direction: column;
+        &__item {
+          width: 100%;
+          border-right: none;
+          padding-left: 0;
+        }
+      }
+    }
+    .about {
+      flex-direction: column;
+      align-items: normal;
+      margin-bottom: 80px;
+      &__img {
+        height: 300px;
+        width: 100%;
+      }
+      &__content {
+        margin-top: 30px;
+        padding: 0 15px;
+      }
+    }
+    .business {
+      margin-bottom: 60px;
+      .business-contents {
+        flex-direction: column;
+        .business-content {
+          margin: 0;
+          &--left {
+            padding: 0;
+          }
+          &__item {
+            margin-bottom: 20px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .company {
+      flex-direction: column;
+      padding-bottom: 0;
+      &__text {
+        max-width: 100%;
+        .company-inner {
+          width: 100%;
+          padding: 30px 15px;
+          box-sizing: border-box;
+          &__info {
+            flex-direction: column;
+            dt {
+              margin-top: 15px;
+              &:first-child {
+                margin: 0;
+              }
+            }
+            dd {
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+      &__img {
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  footer {
+    .footer-top {
+      flex-direction: column;
+      align-items: flex-start;
+      &__left {
+        h1 {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
