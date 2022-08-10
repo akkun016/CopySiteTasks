@@ -12,207 +12,234 @@ body {
   color: black;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
 header {
   position: relative;
 }
 header .header-inner {
   height: 80px;
   margin: 0 0 0 auto;
-  padding-left: 15px;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
 }
 header .header-inner .header-left {
-  margin: 0 auto 0 max(50vw - 600px, 0px);
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 1032px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 header .header-inner .header-left__title {
-  margin-right: 40px;
-  font-size: 2.2rem;
-  color: black;
-  letter-spacing: 0.6rem;
+  width: 100px;
+  margin-right: 60px;
   line-height: 100%;
-  text-decoration: none;
+}
+header .header-inner .header-left__title a {
+  display: block;
 }
 header .header-inner .header-left__nav ul {
   display: flex;
 }
 header .header-inner .header-left__nav ul li {
-  margin-right: 20px;
+  margin-right: 30px;
   list-style: none;
 }
 header .header-inner .header-left__nav ul li:last-child {
   margin-right: 0;
 }
 header .header-inner .header-left__nav ul li a {
-  font-size: 0.9rem;
-  color: black;
+  font-size: 0.875rem;
+  color: #000;
   text-decoration: none;
 }
-header .header-inner .header-right a {
-  display: block;
-  background-color: black;
-  padding: 30px 62px;
-  font-size: 0.8rem;
+header .header-inner .header-right {
+  display: inline-block;
+  width: 200px;
+  height: 80px;
+  line-height: 80px;
+  background-color: #000;
+  font-size: 0.75rem;
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
 }
-header .header-inner .header-right a:hover {
+header .header-inner .header-right:hover {
   opacity: 0.8;
 }
 
 main {
   background-color: #f4f4f4;
 }
-main .section-title h1 {
+main .section-title h2 {
   font-size: 2.2rem;
   font-weight: normal;
   letter-spacing: 0.8rem;
-  line-height: 2.2rem;
+  line-height: 1;
   margin-bottom: 8px;
 }
 main .section-title p {
-  font-size: 0.8rem;
-  margin-bottom: 30px;
+  font-size: 0.875rem;
+  margin-bottom: 24px;
 }
 main .section-title::after {
   content: "";
   display: block;
   width: 40px;
   border-bottom: solid 1px rgb(40, 40, 40);
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 main .visual-img {
   height: calc(100vh - 80px);
   width: 100vw;
   object-fit: cover;
+  margin-bottom: 120px;
 }
-main .news {
-  max-width: 1000px;
-  margin: 120px auto;
-  padding: 0 15px;
+main #news {
+  width: 100%;
+  max-width: 1032px;
+  margin: 0 auto;
+  padding: 0 16px;
+  margin-bottom: 120px;
 }
-main .news .announce {
+main #news .announce {
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
   line-height: 1.5;
 }
-main .news .announce__item {
+main #news .announce li {
   width: 33%;
-  padding: 20px 0 20px 20px;
-  border-right: solid 1px rgb(40, 40, 40);
+  padding: 10px 0 10px 20px;
+  border-right: solid 1px #000;
+  list-style: none;
 }
-main .news .announce__item:first-child {
+main #news .announce li:first-child {
   padding-left: 0;
 }
-main .news .announce__item:last-child {
+main #news .announce li:last-child {
   border: none;
 }
-main .news .announce__item .item-top {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
+main #news .announce li .item-top {
+  margin-bottom: 16px;
 }
-main .news .announce__item .item-top__tag {
-  width: 55px;
-  background-color: rgb(40, 40, 40);
-  margin-left: 20px;
+main #news .announce li .item-top__tag {
+  display: inline-block;
+  width: 50px;
+  line-height: 20px;
+  background-color: #000;
+  margin-left: 10px;
   text-align: center;
+  font-size: 0.75rem;
   color: #ffffff;
 }
-main .about {
+main #about {
   display: flex;
-  align-items: flex-end;
   margin-bottom: 120px;
 }
-main .about__img {
-  height: 420px;
+main #about .about-img {
+  height: 400px;
   width: 55%;
   object-fit: cover;
 }
-main .about__content {
-  padding: 0 5%;
+main #about .about-text {
+  padding: 180px 5% 0 5%;
 }
-main .about__content p {
+main #about .about-text p {
   font-size: 0.85rem;
-  line-height: 2;
+  line-height: 2.2;
 }
-main .business {
-  max-width: 1000px;
+main #business {
+  width: 100%;
+  max-width: 1032px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
+  margin-bottom: 120px;
 }
-main .business .business-contents {
+main #business .business-contents {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 10%;
 }
-main .business .business-contents .business-content {
-  margin: 0 30px;
+main #business .business-contents .business-content {
+  width: 46%;
 }
-main .business .business-contents .business-content--left {
+main #business .business-contents .business-content--left {
   padding-top: 80px;
 }
-main .business .business-contents .business-content__item {
+main #business .business-contents .business-content__item {
   margin-bottom: 50px;
 }
-main .business .business-contents .business-content__item p {
+main #business .business-contents .business-content__item:last-child {
+  margin-bottom: 0;
+}
+main #business .business-contents .business-content__item p {
   display: flex;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
 }
-main .business .business-contents .business-content__item p::before {
+main #business .business-contents .business-content__item p::before {
   content: "";
   display: block;
   height: 1px;
   width: 8px;
-  background-color: rgb(40, 40, 40);
+  background-color: #000;
   margin: 10px 10px 0 0;
 }
-main .business .business-contents .business-content__item img {
+main #business .business-contents .business-content__item img {
+  max-width: 100%;
   margin-top: 10px;
 }
-main .company {
+main #company {
+  height: 750px;
   display: flex;
-  justify-content: center;
-  max-width: 1050px;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1032px;
   margin: 0 auto;
-  padding: 0 15px 120px 15px;
+  padding: 0 16px;
 }
-main .company__text {
-  max-width: 47%;
-}
-main .company__text .company-inner {
-  width: 90%;
-  padding: 100px 15%;
+main #company .company-text {
+  width: 55%;
   background-color: #ffffff;
-  box-sizing: content-box;
+  padding: 100px 8% 100px 6%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-main .company__text .company-inner__info {
+main #company .company-text__info {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   font-size: 0.85rem;
   line-height: 2;
 }
-main .company__text .company-inner__info dt {
+main #company .company-text__info dt {
   width: 20%;
 }
-main .company__text .company-inner__info dd {
+main #company .company-text__info dd {
   width: 80%;
 }
-main .company__img {
+main #company .company-img {
   height: 400px;
   width: 53%;
-  margin-top: 100px;
+  object-fit: cover;
+  position: absolute;
+  top: 115px;
+  right: 0;
 }
 
 footer {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1032px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
 }
 footer .footer-top {
   display: flex;
@@ -220,16 +247,11 @@ footer .footer-top {
   align-items: center;
   padding: 40px 0;
 }
-footer .footer-top__left h1 {
-  font-size: 2.2rem;
-  font-weight: lighter;
-  letter-spacing: 0.6rem;
-}
 footer .footer-top__right {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
 }
 footer .footer-bottom {
-  font-size: 0.65rem;
+  font-size: 0.625rem;
   padding-bottom: 20px;
 }
 
@@ -240,6 +262,7 @@ footer .footer-bottom {
   }
   header .header-inner .header-left__title {
     font-size: 1.6rem;
+    margin: 8px 0;
   }
   header .header-inner .header-right {
     display: none;
@@ -247,81 +270,92 @@ footer .footer-bottom {
   main .section-title::after {
     margin-bottom: 30px;
   }
-  main .news {
-    margin: 80px 0;
+  main .visual-img {
+    margin-bottom: 80px;
   }
-  main .news .announce {
+  main #news {
+    margin-bottom: 80px;
+  }
+  main #news .announce {
     flex-direction: column;
   }
-  main .news .announce__item {
+  main #news .announce li {
     width: 100%;
     border-right: none;
     padding-left: 0;
+    margin-bottom: 20px;
   }
-  main .about {
+  main #news .announce li:last-child {
+    margin-bottom: 0;
+  }
+  main #about {
     flex-direction: column;
     align-items: normal;
     margin-bottom: 80px;
   }
-  main .about__img {
+  main #about .about-img {
     height: 300px;
     width: 100%;
   }
-  main .about__content {
+  main #about .about-text {
     margin-top: 30px;
     padding: 0 15px;
   }
-  main .business {
-    margin-bottom: 60px;
+  main #business {
+    margin-bottom: 80px;
   }
-  main .business .business-contents {
+  main #business .business-contents {
     flex-direction: column;
-  }
-  main .business .business-contents .business-content {
-    margin: 0;
-  }
-  main .business .business-contents .business-content--left {
     padding: 0;
   }
-  main .business .business-contents .business-content__item {
+  main #business .business-contents .business-content {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  main #business .business-contents .business-content--left {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  main #business .business-contents .business-content__item {
+    margin-bottom: 30px;
+  }
+  main #company {
+    height: auto;
+    flex-direction: column;
+    position: static;
+  }
+  main #company .company-text {
+    width: 100%;
+    padding: 40px 20px;
     margin-bottom: 20px;
+    position: static;
   }
-  main .business .business-contents .business-content__item img {
-    width: 100%;
-  }
-  main .company {
-    flex-direction: column;
-    padding-bottom: 0;
-  }
-  main .company__text {
-    max-width: 100%;
-  }
-  main .company__text .company-inner {
-    width: 100%;
-    padding: 30px 15px;
-    box-sizing: border-box;
-  }
-  main .company__text .company-inner__info {
+  main #company .company-text__info {
     flex-direction: column;
   }
-  main .company__text .company-inner__info dt {
+  main #company .company-text__info dt {
     margin-top: 15px;
   }
-  main .company__text .company-inner__info dt:first-child {
+  main #company .company-text__info dt:first-child {
     margin: 0;
   }
-  main .company__text .company-inner__info dd {
+  main #company .company-text__info dd {
     margin-left: 15px;
   }
-  main .company__img {
+  main #company .company-img {
     width: 100%;
-    margin-top: 15px;
+    position: static;
   }
   footer .footer-top {
     flex-direction: column;
     align-items: flex-start;
   }
-  footer .footer-top__left h1 {
-    font-size: 1.6rem;
+  footer .footer-top__left {
+    margin-bottom: 10px;
+  }
+  footer .footer-top__left img {
+    width: 80px;
+    margin: 8px 0;
   }
 }

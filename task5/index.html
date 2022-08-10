@@ -11,57 +11,57 @@
   <header>
     <div class="header-inner">
       <div class="header-left">
-        <a href="#" class="header-left__title">WED</a>
+        <h1 class="header-left__title">
+          <a href="#"><img src="https://placehold.jp/100x26.png" alt="headerTitle"></a>
+        </h1>
         <nav class="header-left__nav">
           <ul>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">BUSINESS</a></li>
-            <li><a href="#">COMPANY</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#business">BUSINESS</a></li>
+            <li><a href="#company">COMPANY</a></li>
           </ul>
         </nav>
       </div>
-      <div class="header-right">
-        <a href="#">お問い合わせ</a>
-      </div>
+      <a href="#" class="header-right">お問い合わせ</a>
     </div>
   </header>
   <main>
     <img class="visual-img" src="https://placehold.jp/1800x900.png" alt="visualImg">
-    <section class="news">
+    <section id="news">
       <div class="section-title">
-        <h1>NEWS</h1>
+        <h2>NEWS</h2>
         <p>ニュース</p>
       </div>
-      <div class="announce">
-        <div class="announce__item">
+      <ul class="announce">
+        <li>
           <div class="item-top">
-            <p>2021.01.01</p>
-            <p class="item-top__tag">NEWS</p>
+            <time datetime="2021-01-01">2021.01.01</time>
+            <span class="item-top__tag">NEWS</span>
           </div>
           <p>タイトルタイトルタイトルタイトル</p>
-        </div>
-        <div class="announce__item">
+        </li>
+        <li>
           <div class="item-top">
-            <p>2021.01.01</p>
-            <p class="item-top__tag">PRESS</p>
+            <time datetime="2021-01-01">2021.01.01</time>
+            <span class="item-top__tag">PRESS</span>
           </div>
           <p>タイトルタイトルタイトルタイトル</p>
-        </div>
-        <div class="announce__item">
+        </li>
+        <li>
           <div class="item-top">
-            <p>2021.01.01</p>
-            <p class="item-top__tag">NEWS</p>
+            <time datetime="2021-01-01">2021.01.01</time>
+            <span class="item-top__tag">NEWS</span>
           </div>
           <p>タイトルタイトルタイトルタイトル</p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
-    <section class="about">
-      <img src="https://placehold.jp/1200x420.png" alt="aboutImg" class="about__img">
-      <div class="about__content">
+    <section id="about">
+      <img src="https://placehold.jp/1200x420.png" alt="aboutImg" class="about-img">
+      <div class="about-text">
         <div class="section-title">
-          <h1>ABOUT</h1>
+          <h2>ABOUT</h2>
           <p>私たちについて</p>
         </div>
         <p>テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト</p>
@@ -69,64 +69,62 @@
         <p>テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト</p>
       </div>
     </section>
-    <section class="business">
+    <section id="business">
       <div class="section-title">
-        <h1>BUSINESS</h1>
+        <h2>BUSINESS</h2>
         <p>事業内容</p>
       </div>
       <div class="business-contents">
         <div class="business-content business-content--left">
           <div class="business-content__item">
             <p>Web制作・マーケティング</p>
-            <img src="https://placehold.jp/360x240.png" alt="businessImg">
+            <img src="https://placehold.jp/760x480.png" alt="businessImg">
           </div>
           <div class="business-content__item">
             <p>インターネットメディア事業</p>
-            <img src="https://placehold.jp/360x240.png" alt="businessImg">
+            <img src="https://placehold.jp/760x480.png" alt="businessImg">
           </div>
         </div>
         <div class="business-content">
           <div class="business-content__item">
             <p>プロモーション企画・制作</p>
-            <img src="https://placehold.jp/360x240.png" alt="businessImg">
+            <img src="https://placehold.jp/760x480.png" alt="businessImg">
           </div>
           <div class="business-content__item">
             <p>ソーシャル企画・運営</p>
-            <img src="https://placehold.jp/360x240.png" alt="businessImg">
+            <img src="https://placehold.jp/760x480.png" alt="businessImg">
           </div>
         </div>
       </div>
     </section>
-    <section class="company">
-      <div class="company__text">
-        <div class="company-inner">
-          <div class="section-title">
-            <h1>COMPANY</h1>
-            <p>会社情報</p>
-          </div>
-          <dl class="company-inner__info">
-            <dt>会社名</dt>
-            <dd>ウェブエンターテイメントデザイン株式会社</dd>
-            <dt>所在地</dt>
-            <dd>東京都渋谷区桜丘町99-9 West Building 3F</dd>
-            <dt>代表</dt>
-            <dd>ＸＸＸＸＸＸ</dd>
-            <dt>設立</dt>
-            <dd>2021年1月1日</dd>
-            <dt>資本金</dt>
-            <dd>3,000,000円</dd>
-            <dt>事業内容</dt>
-            <dd>Web制作・マーケティング<br>インターネットメディア事業<br>プロモーション企画・制作<br>ソーシャル企画・運営</dd>
-          </dl>
+    <section id="company">
+      <div class="company-text">
+        <div class="section-title">
+          <h2>COMPANY</h2>
+          <p>会社情報</p>
         </div>
+        <dl class="company-text__info">
+          <dt>会社名</dt>
+          <dd>ウェブエンターテイメントデザイン株式会社</dd>
+          <dt>所在地</dt>
+          <dd>東京都渋谷区桜丘町99-9 West Building 3F</dd>
+          <dt>代表</dt>
+          <dd>ＸＸＸＸＸＸ</dd>
+          <dt>設立</dt>
+          <dd>2021年1月1日</dd>
+          <dt>資本金</dt>
+          <dd>3,000,000円</dd>
+          <dt>事業内容</dt>
+          <dd>Web制作・マーケティング<br>インターネットメディア事業<br>プロモーション企画・制作<br>ソーシャル企画・運営</dd>
+        </dl>
       </div>
-      <img src="https://placehold.jp/800x400.png" alt="companyImg" class="company__img">
+      <img src="https://placehold.jp/800x400.png" alt="companyImg" class="company-img">
     </section>
   </main>
   <footer>
     <div class="footer-top">
       <div class="footer-top__left">
-        <h1>WED</h1>
+        <img src="https://placehold.jp/100x26.png" alt="logoImg">
       </div>
       <div class="footer-top__right">
         <p>Web Entertainment Design Inc.</p>
