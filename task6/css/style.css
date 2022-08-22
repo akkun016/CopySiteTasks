@@ -1,19 +1,20 @@
-@charset "UTF-8";
 html {
   font-size: 100%;
 }
 
-* {
+*, :after, :before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+  font-family: "Noto Serif JP", serif;
   flex-direction: row-reverse;
 }
 
-span, p, a, p, div, h1, h2, h3, h4, h5, time {
-  -ms-writing-mode: vertical-rl;
+span, p, a, p, div, h1, h2, h3, h4, h5, dt, dd {
   writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
 }
 
 img {
@@ -23,14 +24,23 @@ img {
 
 #header {
   height: 100vh;
-  background: center url("https://placehold.jp/1450x800.png");
+  width: 100%;
+  background-image: url("https://placehold.jp/1920x1280.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 80px;
   position: relative;
 }
 #header nav {
   display: flex;
-  position: absolute;
-  top: 60px;
-  right: 70px;
+}
+#header nav .header-title {
+  margin-left: 60px;
+  line-height: 1px;
+}
+#header nav .header-title a {
+  display: block;
 }
 #header nav ul {
   display: flex;
@@ -46,33 +56,23 @@ img {
   color: #ffffff;
   text-decoration: none;
 }
-#header nav h1 {
-  margin-left: 45px;
-}
-#header nav h1 a {
-  font-size: 2.6rem;
-  color: #ffffff;
-  text-decoration: none;
-  letter-spacing: 12px;
-}
 #header .store-btn {
-  height: 250px;
-  width: 80px;
+  padding: 8px;
   background-color: rgb(65, 65, 65);
   position: absolute;
   bottom: 30px;
   left: 40px;
   text-align: center;
-  padding-right: 10px;
 }
 #header .store-btn a {
   display: inline-block;
-  height: 230px;
-  width: 60px;
-  line-height: 60px;
+  padding: 30px 18px;
   border: #ffffff 1px solid;
   color: #ffffff;
   text-decoration: none;
+}
+#header .store-btn a:hover {
+  opacity: 0.7;
 }
 
 #main {
@@ -80,41 +80,33 @@ img {
   padding-top: 180px;
 }
 #main .wrapper {
-  max-width: 1030px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 20px 180px 20px;
 }
 #main .wrapper .section-title {
-  display: flex;
-  margin-left: 20px;
-  margin-left: 100px;
-  flex-direction: column;
-  align-items: flex-start;
-}
-#main .wrapper .section-title span {
   line-height: 1;
-  font-size: 0.8rem;
   font-weight: normal;
 }
-#main .wrapper .section-title span:first-child {
-  margin-left: 10px;
+#main .wrapper .section-title .en {
+  font-size: 0.875rem;
 }
-#main .wrapper .section-title span:last-child {
-  margin-bottom: 30px;
+#main .wrapper .section-title .ja {
   font-size: 2rem;
   letter-spacing: 3px;
 }
-#main .wrapper .section-title__product {
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
+#main .wrapper .section-title__news {
   margin-left: 20px;
-  margin-right: 0;
+  margin-left: 100px;
 }
-#main .wrapper .section-title__product span:first-child {
-  margin-left: 0;
+#main .wrapper .section-title__news .en {
+  display: block;
+  margin-left: 15px;
 }
-#main .wrapper .section-title__product--science {
+#main .wrapper .section-title__product {
+  margin-left: 20px;
+}
+#main .wrapper .section-title__product--left {
   margin-left: 0;
   margin-right: 20px;
 }
@@ -125,17 +117,16 @@ img {
   display: flex;
   margin-top: 70px;
 }
-#main #info .info-lists .info-list {
-  display: flex;
-  padding: 15px 30px;
+#main #info .info-lists dt {
+  padding: 15px 30px 15px 5px;
   border-right: 1px solid #000;
-}
-#main #info .info-lists .info-list:last-child {
-  border-left: 1px solid #000;
-}
-#main #info .info-lists .info-list__time {
   font-size: 0.75rem;
-  margin-left: 5px;
+}
+#main #info .info-lists dd {
+  padding: 15px 0 15px 30px;
+}
+#main #info .info-lists dd:last-child {
+  border-left: 1px solid #000;
 }
 #main .item {
   display: flex;
@@ -152,9 +143,9 @@ img {
   margin-top: 100px;
 }
 #main .item .item-img__text {
-  width: 380px;
-  background-color: rgba(255, 240, 20, 0.65);
-  padding: 45px 0;
+  width: 58%;
+  background-color: rgba(255, 240, 20, 0.6);
+  padding: 50px 0;
   text-align: center;
   color: #ffffff;
   writing-mode: horizontal-tb;
@@ -163,7 +154,7 @@ img {
   left: -20px;
 }
 #main .item .item-img__text--red {
-  background-color: rgba(150, 0, 0, 0.65);
+  background-color: rgba(150, 0, 0, 0.6);
   right: -20px;
 }
 #main #map {
@@ -178,109 +169,111 @@ img {
 #footer {
   padding: 80px 80px 30px 30px;
   background-color: #000;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: #ffffff;
 }
 #footer .footer-nav {
-  width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
-}
-#footer .footer-nav .footer-left a {
-  margin-bottom: 3px;
-  color: #ffffff;
-  text-decoration: none;
-}
-#footer .footer-nav .footer-left a:last-child::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 1px;
-  background-color: #ffffff;
-  margin-bottom: 8px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 #footer .footer-nav .footer-right__title {
-  margin-left: 50px;
-  line-height: 1;
-  font-size: 2.6rem;
-  color: #ffffff;
-  letter-spacing: 12px;
+  margin-left: 60px;
+  line-height: 1px;
+}
+#footer .footer-nav .footer-right__title a {
+  display: block;
 }
 #footer .footer-nav .footer-right__text {
   margin-left: 60px;
+  line-height: 2;
 }
-#footer .footer-nav .footer-right__text p {
-  margin-left: 8px;
-}
-#footer .footer-nav .footer-right__text p:last-child {
-  margin-left: 0;
+#footer .footer-nav .footer-right__text a {
+  text-decoration: none;
+  color: #ffffff;
 }
 #footer .footer-nav .footer-right__lists li {
-  margin-left: 30px;
+  margin-left: 25px;
   list-style: none;
 }
 #footer .footer-nav .footer-right__lists li a {
-  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+#footer .footer-nav .footer-left a {
   color: #ffffff;
   text-decoration: none;
 }
 #footer .copyright {
   text-align: center;
-  -ms-writing-mode: horizontal-tb;
   writing-mode: horizontal-tb;
-  font-size: 0.65rem;
+  -webkit-writing-mode: horizontal-tb;
+  -moz-writing-mode: horizontal-tb;
+  -ms-writing-mode: horizontal-tb;
+  font-size: 0.625rem;
 }
 
 @media screen and (max-width: 768px) {
-  #header nav {
-    top: 20px;
-    right: 20px;
+  #header {
+    background-image: url("https://placehold.jp/640x760.png");
+    padding: 20px;
   }
   #header .store-btn {
     bottom: 20px;
     left: 20px;
   }
+  #main {
+    padding-top: 80px;
+  }
   #main .wrapper {
+    max-width: 100%;
     padding: 0 20px 100px 20px;
   }
   #main .wrapper .section-title {
     margin-left: 30px;
   }
-  #main .wrapper .section-title span:last-child {
+  #main .wrapper .section-title__news .ja {
     font-size: 1.8rem;
   }
   #main .wrapper .section-title__product {
     margin-left: 10px;
   }
-  #main .wrapper .section-title__product span:first-child {
-    display: none;
-  }
-  #main .wrapper .section-title__product span:last-child {
-    font-size: 1.5rem;
-  }
-  #main .wrapper .section-title__product--science {
+  #main .wrapper .section-title__product--left {
     margin-left: 0;
     margin-right: 10px;
+  }
+  #main .wrapper .section-title__product .en {
+    display: none;
+  }
+  #main .wrapper .section-title__product .ja {
+    font-size: 1.5rem;
   }
   #main #info .info-lists {
     margin-top: 20px;
   }
-  #main #info .info-lists .info-list {
-    padding: 10px;
+  #main #info .info-lists dt {
+    padding: 15px 12px 15px 5px;
   }
-  #main #info .info-lists .info-list:nth-child(3) {
-    border-left: 1px solid #000;
-  }
-  #main #info .info-lists .info-list:nth-child(n+4) {
+  #main #info .info-lists dt:nth-of-type(n+4) {
     display: none;
+  }
+  #main #info .info-lists dd {
+    padding: 15px 0 15px 15px;
+  }
+  #main #info .info-lists dd:nth-of-type(n+4) {
+    display: none;
+  }
+  #main #info .info-lists dd:nth-of-type(3) {
+    border-left: 1px solid #000;
   }
   #main .item .item-img {
     width: 90%;
     max-width: 640px;
   }
   #main .item .item-img__img {
-    margin-top: 65px;
+    margin-top: 70px;
   }
   #main .item .item-img__text {
     padding: 25px 0;
@@ -293,12 +286,12 @@ img {
     margin-left: 20px;
   }
   #footer .footer-nav .footer-right__text {
-    margin-left: 20px;
+    margin-left: 25px;
   }
   #footer .footer-nav .footer-right__lists li {
     margin-left: 10px;
   }
   #footer .footer-nav .footer-right__lists li a {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
 }
